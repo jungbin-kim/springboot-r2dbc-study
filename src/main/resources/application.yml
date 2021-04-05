@@ -1,0 +1,12 @@
+spring:
+  r2dbc:
+    url: r2dbc:mysql://127.0.0.1:33306/test_r2dbc?useUnicode=true&characterEncoding=utf8&useSSL=false&serverTimezone=Asia/Seoul
+    username: test_r2dbc
+    password: test1!
+
+logging:
+  level:
+    dev:
+      miku:
+        r2dbc:
+          mysql: DEBUG

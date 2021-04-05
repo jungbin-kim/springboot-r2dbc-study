@@ -1,0 +1,16 @@
+version: "3.1"
+services:
+  mysql-db:
+    image: mysql:5.7.15
+    container_name: mysql-r2dbc-test-db
+    ports:
+      - "33306:3306"
+    environment:
+      MYSQL_DATABASE: test_r2dbc
+      MYSQL_USER: test_r2dbc
+      MYSQL_PASSWORD: test1!
+      MYSQL_ROOT_PASSWORD: test1!
+      TZ: Asia/Seoul
+    command:
+      - --character-set-server=utf8mb4
+      - --collation-server=utf8mb4_unicode_ci
