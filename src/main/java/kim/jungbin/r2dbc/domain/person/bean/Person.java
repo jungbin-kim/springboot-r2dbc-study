@@ -18,6 +18,15 @@ import org.springframework.data.relational.core.mapping.Table;
 public class Person implements Persistable<String> {
 
   private final static Random random = new Random();
+  /* ID Generation
+   SpringData R2DBC는 ID를 사용하여 엔티티를 식별. 엔티티의 ID는 SpringData의 @Id Annotation 필요.
+   DB에 ID 컬럼에 Auto Increase 가 설정된 경우, 생성 된 값은 데이터베이스에 삽입 된 후 엔터티에 설정됩니다.
+
+   SpringData R2DBC는 엔티티 식별자 값이 초기 값으로 설정되어있는 경우 ID 컬럼의 값을 삽입지 않음.
+   초기 값 => primitive type 유형의 경우 0, Long과 같은 숫자 참조 타입인 경우 null
+
+   https://docs.spring.io/spring-data/r2dbc/docs/current-SNAPSHOT/reference/html/#r2dbc.entity-persistence.id-generation
+  */
   // R2dbcRepository 방식에서 @Id 어노테이션 없을 경우 save 가 수행되지만, 에러 발생.
   // => @Id 어노테이션 추가 시 `Failed to update table [tbl_person]` 발생.
   // => @Id 유무로 insert 와 update가 구분되는데 이를 위해서 Persistable 을 구현하여 isNew 값을 지정해준다.
