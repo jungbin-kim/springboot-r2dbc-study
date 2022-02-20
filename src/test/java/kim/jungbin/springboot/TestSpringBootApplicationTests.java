@@ -1,10 +1,10 @@
-package kim.jungbin.r2dbc;
+package kim.jungbin.springboot;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
 
 @SpringBootTest
-class TestR2dbcApplicationTests {
+class TestSpringBootApplicationTests {
 
 	@Test
 	void contextLoads() {

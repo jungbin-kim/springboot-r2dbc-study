@@ -1,20 +1,15 @@
-package kim.jungbin.r2dbc.domain.person.bean;
+package kim.jungbin.springboot.domain.person.bean;
 
 import java.util.Random;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
-import org.springframework.data.annotation.Id;
-import org.springframework.data.relational.core.mapping.Table;
 
-// Id가 DB에서 자동 생성되는 경우 Entity
 @Getter
 @AllArgsConstructor
-@Table("tbl_person_2")
 public class Person2 {
 
   private final static Random random = new Random();
 
-  @Id
   private String personId;
   private String name;
 

@@ -1,13 +1,13 @@
-package kim.jungbin.r2dbc;
+package kim.jungbin.springboot;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
-public class TestR2dbcApplication {
+public class TestSpringBootApplication {
 
 	public static void main(String[] args) {
-		SpringApplication.run(TestR2dbcApplication.class, args);
+		SpringApplication.run(TestSpringBootApplication.class, args);
 	}
 
 }
